@@ -8,3 +8,6 @@ const example = () => {
 };
 
 window.example = example;
+const obtenerPokemon = array=> array.filter(({fire})=> fuego>= fire);
+const pokemonFuego = obtenerPokemon(pokemon);
+return '';
