@@ -1,13 +1,17 @@
 /* Manejo de data */
-
 // esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+// puedes ver como agregamos la función a nuestro objeto global window 
+//declaramos variable 
 
-const example = () => {
-  return 'example';
-};
-
-window.example = example;
-const obtenerPokemon = array=> array.filter(({fire})=> fuego>= fire);
-const pokemonFuego = obtenerPokemon(pokemon);
-return '';
+window.dataPokemon = dataPokemon;
+  const dataPokemon = (codePoke, condition) => {
+      /* Acá va tu código */ 
+ const filtrar= codePoke.filter(element=>{
+   //el filter pasa por todos los elementos del array
+   //element va a tomar ese valor en cada vuelta
+   return element.type.includes(condition);
+ });
+ return filtrar;
+      }      
+   
+    

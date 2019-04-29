@@ -1,77 +1,89 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
+
+</html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      
-      <h1>Code-Poke</h1>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Home</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-           <a class="navbar-brand" href="#">Número</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Filtar por tipo
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Acero</a>
-                  <a class="dropdown-item" href="#">Agua</a>
-                  <a class="dropdown-item" href="#">Bicho</a>  
-                  <a class="dropdown-item" href="#">Dragón</a>
-                  <a class="dropdown-item" href="#">Eléctrico</a>
-                  <a class="dropdown-item" href="#">Fantasma</a>  
-                  <a class="dropdown-item" href="#">Fuego</a>
-                  <a class="dropdown-item" href="#">Hada</a>
-                  <a class="dropdown-item" href="#">Hielo</a>
-                  <a class="dropdown-item" href="#">Lucha</a>  
-                  <a class="dropdown-item" href="#">Normal</a>  
-                  <a class="dropdown-item" href="#">Planta</a>
-                  <a class="dropdown-item" href="#">Psíquico</a>
-                  <a class="dropdown-item" href="#">Roca</a>  
-                  <a class="dropdown-item" href="#">Tierra</a>  
-                  <a class="dropdown-item" href="#">Veneno</a>  
-                  <a class="dropdown-item" href="#">Volador</a>        
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Huevo
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Eclosion 2km</a>
-                  <a class="dropdown-item" href="#">Eclosion 5km</a>
-                  <a class="dropdown-item" href="#">Eclosion 10km</a>  
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-    
-    </header>
-     <!-- <div class="col"></div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="root">
+  <header>
+
+    <h1>Code-Poke</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Número</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Filtar por tipo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" poke-type="acero">Acero</a>
+              <a class="dropdown-item" href="#" poke-type="agua">Agua</a>
+              <a class="dropdown-item" href="#" poke-type="bicho">Bicho</a>
+              <a class="dropdown-item" href="#" poke-type="dragón">Dragón</a>
+              <a class="dropdown-item" href="#" poke-type="electrico">Eléctrico</a>
+              <a class="dropdown-item" href="#" poke-type="fantasma">Fantasma</a>
+              <a class="dropdown-item" href="#" poke-type="fuego">Fuego</a>
+              <a class="dropdown-item" href="#" poke-type="hada">Hada</a>
+              <a class="dropdown-item" href="#" poke-type="hielo">Hielo</a>
+              <a class="dropdown-item" href="#" poke-type="lucha">Lucha</a>
+              <a class="dropdown-item" href="#" poke-type="normal">Normal</a>
+              <a class="dropdown-item" href="#" poke-type="planta">Planta</a>
+              <a class="dropdown-item" href="#" poke-type="psíquico">Psíquico</a>
+              <a class="dropdown-item" href="#" poke-type="roca">Roca</a>
+              <a class="dropdown-item" href="#" poke-type="tierra">Tierra</a>
+              <a class="dropdown-item" href="#" poke-type="veneno">Veneno</a>
+              <a class="dropdown-item" href="#" poke-type="volador">Volador</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Huevo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Eclosion 2km</a>
+              <a class="dropdown-item" href="#">Eclosion 5km</a>
+              <a class="dropdown-item" href="#">Eclosion 10km</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <!-- <div class="col"></div>
                 <div class="col"></div>
                 <div class="col"></div>
                 <div class="col"></div>
                 <div id="gatito"></div>-->
-                <div class="bd-example">
+  <!--<div class="bd-example">
                   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -110,24 +122,26 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                  <img src="img/fire.jpg" class="card-img-top" alt="Poke_fire">
-                  <div class="card-body">
-                    <h5 class="card-title">Fuego</h5>
-                    <p class="card-text">Pokémons Tipo Fuego</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
+                </div>-->
                 
-    <div id="root"></div>
+              
+              
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./data/pokemon/pokemon.js"></script>
 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./data/pokemon/pokemon.js"></script>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
