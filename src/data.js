@@ -12,5 +12,5 @@ const filterType = (codePoke, condition) => {
     return element.type.includes(condition);
   })
   return resultFilterType;
-
+}
 window.filterType = filterType;

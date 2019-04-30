@@ -4,10 +4,10 @@ require('../src/data');
 require('./data.spec.js');
 
 
-describe('codePoke', () => {
+describe('filterType', () => {
   
   it('debería ser una función', () => {
-    assert.equal(typeof codePoke.filter, 'function');
+    assert.equal(typeof filterType, 'function');
   });
 
   it('debería retornar "Charmander, Bulbasaur, Pikachu" para "Fire"', () => {

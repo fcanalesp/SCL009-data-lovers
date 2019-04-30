@@ -9,9 +9,7 @@ let rootBody = document.getElementById("root");
 let pokepoke = (codePoke) => {
   for (let i = 0; i < codePoke.length; i++) {
     rootBody.innerHTML +=
-      `<div class="container">
-    <div id="root"></div>
-   <div class="col-sm-2">
+      `<div class="col-sm-2">
       <img src="${codePoke[i].img}" class="card-img-top" alt="Poke">
       <div class="card-body">
           <div class="col-sm-2">
@@ -49,9 +47,9 @@ selectType.forEach(element => {
   let result = element.type.includes(codePoke,condition);
 });*/
 let selectType = document.querySelectorAll("a.poke-type");
- selectType.forEach(element => {
-   element.addEventListener("click", ()=>{
-    codePoke(window.dataPokemon(codePoke,element.getAttribute("poke-type")));
+selectType.forEach(element => {
+  element.addEventListener("click", () => {
+    codePoke(window.filterType(codePoke, element.getAttribute("poke-type")));
 
-   })
- })
+  })
+})
