@@ -22,65 +22,35 @@
     <h1>Code-Poke</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Número</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Filtrar</a>
 
-      <select>
-        <option value="dropdown-item" href="#" poke-type="acero">Acero</option>
-        <option value="dropdown-item" href="#" poke-type="agua">Agua</option>
-        <option value="dropdown-item" href="#" poke-type="bicho">Bicho</option>
-        <option value="dropdown-item" href="#" poke-type="dragón">Dragón</option>
-        <option value="dropdown-item" href="#" poke-type="eléctrico">Eléctrico</option>
-        <option value="dropdown-item" href="#" poke-type="fantasma">Fantasma</option>
-        <option value="dropdown-item" href="#" poke-type="fuego">Fuego</option>
-        <option value="dropdown-item" href="#" poke-type="hada">Hada</option>
-        <option value="dropdown-item" href="#" poke-type="hielo">Hielo</option>
-        <option value="dropdown-item" href="#" poke-type="lucha">Lucha</option>
-        <option value="dropdown-item" href="#" poke-type="normal">Normal</option>
-        <option value="dropdown-item" href="#" poke-type="planta">Planta</option>
-        <option value="dropdown-item" href="#" poke-type="psíquico">Psíquico</option>
-        <option value="dropdown-item" href="#" poke-type="roca">Roca</option>
-        <option value="dropdown-item" href="#" poke-type="tierra">Tierra</option>
-        <option value="dropdown-item" href="#" poke-type="veneno">Veneno</option>
-        <option value="dropdown-item" href="#" poke-type="volador">Volador</option>
-      </select>
-
-      </li>
-      </ul>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Huevo
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Eclosion 2km</a>
-              <a class="dropdown-item" href="#">Eclosion 5km</a>
-              <a class="dropdown-item" href="#">Eclosion 10km</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </nav>
 
-
   </header>
-
-
+<div>
+    <select value="filtrar">
+      <option value="dropdown-item" poke-type="acero">Acero</option>
+      <option value="dropdown-item" poke-type="agua">Agua</option>
+      <option value="dropdown-item" poke-type="bicho">Bicho</option>
+      <option value="dropdown-item" poke-type="dragón">Dragón</option>
+      <option value="dropdown-item" poke-type="eléctrico">Eléctrico</option>
+      <option value="dropdown-item" poke-type="fantasma">Fantasma</option>
+      <option value="dropdown-item" poke-type="fuego">Fuego</option>
+      <option value="dropdown-item" poke-type="hada">Hada</option>
+      <option value="dropdown-item" poke-type="hielo">Hielo</option>
+      <option value="dropdown-item" poke-type="lucha">Lucha</option>
+      <option value="dropdown-item" poke-type="normal">Normal</option>
+      <option value="dropdown-item" poke-type="planta">Planta</option>
+      <option value="dropdown-item" poke-type="psíquico">Psíquico</option>
+      <option value="dropdown-item" poke-type="roca">Roca</option>
+      <option value="dropdown-item" poke-type="tierra">Tierra</option>
+      <option value="dropdown-item" poke-type="veneno">Veneno</option>
+      <option value="dropdown-item" poke-type="volador">Volador</option>
+    </select>
+  </div>
   <div class="container-fluid">
     <div id="root" class="row"></div>
   </div>
