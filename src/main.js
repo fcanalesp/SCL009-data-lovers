@@ -1,6 +1,6 @@
 /* Manejo del DOM */
 //declaramos una variable para llamar la data 
-let codePoke = window.POKEMON.pokemon;
+let codePoke = POKEMON.pokemon;
 //aqui estamos mostrando todos los pokemon  
 //console.log(codePoke);
 //mostrar toda la data a traves de una variable, tomando un id del body
@@ -26,30 +26,22 @@ let pokepoke = (codePoke) => {
 }
 window.onload = pokepoke(codePoke);
 
+let selectType = "";
 
 
-//crear una funcion para llamar un tipo de select en html
-/*function cargar_select() {
-  let tipPoke = ["acero", "agua", "bicho","dragón","eléctrico", "fantasma", "fuego", "hada", "hielo", ""];
-  for (let i = 0; i < tipPoke.length; i++)
-  if()
-document.getElementById("").value;
-}*/
-/*
-selectType.forEach(element => {
-  element.addEventListener("click", () => {
-    pokepoke(codePoke.filter(codePoke, element.setAttribute("poke-type")));
-  });
-});*/
-/*document.getElementById("a").addEventListener("click", () =>{
-  let typPoke =document.getElementById("codePoke").value;
-  let filter =document.getElementById("condition").value;
-  let result = element.type.includes(codePoke,condition);
-});*/
-let selectType = document.querySelectorAll("a.poke-type");
-selectType.forEach(element => {
-  element.addEventListener("click", () => {
-    codePoke(window.filterType(codePoke, element.getAttribute("poke-type")));
+selectType = (codePoke, condition) => {
+ let selectTypeResult = codePoke.filter( element => {
+   return element.type == "condition"
+ })
+}
+//window.selectType = selectType;
+// al final declaramos todos lo window.(....) que sean necesarios para hacer globales todas las funciones
+let filType = document.getElementById("type-select");
+let guardar = document.getElementById("root");
+filType.addEventListener("change", () => {
 
-  })
-})
+let condition = filType.options
+[filType.selectedIndex].text;
+console.log(condition);
+
+});

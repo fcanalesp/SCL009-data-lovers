@@ -10,7 +10,7 @@ const filterType = (codePoke, condition) => {
     //el filter pasa por todos los elementos del array
     //element va a tomar ese valor en cada vuelta
     return element.type.includes(condition);
-  })
+  });
   return resultFilterType;
 }
 window.filterType = filterType;
