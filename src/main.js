@@ -27,7 +27,10 @@ let pokepoke = (codePoke) => {
 window.onload = pokepoke(codePoke);
 
 let selectType = "";
+let filter =codePoke.forEach(element => {
 
+  
+});
 
 selectType = (codePoke, condition) => {
  let selectTypeResult = codePoke.filter( element => {
@@ -44,4 +47,20 @@ let condition = filType.options
 [filType.selectedIndex].text;
 console.log(condition);
 
+let getPoke= "";
+for(let i = 0; i <codePoke.length; i++) {
+  `<div class="col-sm-2">
+      <img src="${codePoke[i].img}" class="card-img-top" alt="Poke">
+      <div class="card-body">
+          <div class="col-sm-2">
+        <h5 class="card-title">"Nombre:${codePoke[i].name}"</h5>
+        <h6 class="card-title">"Número:${codePoke[i].num}"</h6>
+        <p class="card-text">"Tipo:${codePoke[i].type}"</p>
+        <a href="#" class="btn-primary">Evolucion</a>
+        </div>
+      </div>
+    </div>`
+}
+
 });
+
