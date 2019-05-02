@@ -3,36 +3,59 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-
-describe('filterType', () => {
+  const dataPoke =[{
+    
+      name: "Caterpie",
+      num: "010",
+      type:["Bug"]
+    },
+    {
+      name: "Dragonite",
+      num: "149",
+      type:["Dragon"]
+    },
+     {
+      name: "Squirtle",
+      num:"007", 
+      type:["Water"]
+     } 
   
-  it('debería ser una función', () => {
-    assert.equal(typeof filterType, 'function');
-  });
-
-  it('debería retornar "Charmander, Bulbasaur, Pikachu" para "Fire"', () => {
-    assert.equal(codePoke.filter("Fire"),"Charmander");
-  });
-})
-
-describe('sort', () => {
+  ]
+ 
+describe('pokedexType', () => {
   
+    
   it('debería ser una función', () => {
-    assert.equal(typeof codePoke.filter, 'function');
+    assert.equal(typeof pokedexType, 'function');
   });
 
-  it('debería retornar ""para "codePoke.filter("")"', () => {
-    assert.equal(example(), 'example');
-  });
-})
 
-describe('compute', () => {
+  it('debería retornar elemento "Caterpie" para filtrar por tipo "Bug"', () => {
+    assert.deepEqual(window.pokedexType(dataPoke, "Bug"), [{
+      name: "Caterpie",
+      num:"010",
+      type:["Bug"]
+    }])
+    });
+  })
   
-  it('debería ser una función', () => {
-    assert.equal(typeof codePoke.filter, 'function');
-  });
 
-  it('debería retornar ""', () => {
-    assert.equal(example(), 'example');
-  });
-})
+  describe('sortPoke', () => {
+  
+    
+    it('debería ser una función', () => {
+      assert.equal(typeof sortPoke, 'function');
+    });
+  
+  
+    it('debería retornar el elemento "Caterpie, Dragonite');
+   /*  assert.deepEqual(window.pokedexType(dataPoke, "Bug"), [{
+        name: "Caterpie",
+        num:"010",
+        type:["Bug"]
+      }])
+      });*/
+    
+    })
+    
+  

@@ -14,10 +14,22 @@
   }
   window.pokedexType = pokedexType;
   
+  //Funcion ordenar
+  const arrPoke= (codePoke, condition) => {
+    arrPoke.sort(function (a,b ) {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+      
+      return 0;
+    });
+
+  }
   
-  
-  
-  function getPokemonByName(name) {
+ /* function getPokemonByName(name) {
     var pokemonList = POKEMON.pokemon; //pokrmonlist es la variable que guardara el pokemon que se busque
     for (var i = 0; i < pokemonList.length; i++) {
       if (pokemonList[i].name.toLowerCase() == name.toLowerCase())
@@ -63,4 +75,4 @@
         return (foundList);
     return ("No existen pokemones asociados a esa debilidad");
   };
-  }
+  }*/

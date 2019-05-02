@@ -1,10 +1,10 @@
 /* Manejo del DOM */
 //declaramos una variable para llamar la data 
-const codePoke = POKEMON.pokemon;
+const codePoke = window.POKEMON.pokemon;
 //aqui estamos mostrando todos los pokemon  
 //const root = document.getElementById("root");
 
-const type = document.getElementById("type");
+//const type = document.getElementById("type");
 
 //console.log(codePoke);
 //mostrar toda la data a traves de una variable, tomando un id del body
@@ -35,7 +35,7 @@ let guardar = document.getElementById("type");
 guardar.addEventListener("change", () => {
 		
   let condition = guardar.options[guardar.selectedIndex].value;
-console.log(condition);
+//console.log(condition);
   let filter =window.pokedexType(codePoke,condition);
   rootBody.innerHTML ="";
 
