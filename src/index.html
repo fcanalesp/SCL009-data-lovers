@@ -30,40 +30,41 @@
     </nav>
 
   </header>
-<div>
-    <select id="type-select">
-      
-        <option value="">Filtrar por tipo</option>
-        <div id="options" onclick="button">
-      <option value="dropdown-item" poke-type="acero">Acero</option>
-      <option value="dropdown-item" poke-type="agua">Agua</option>
-      <option value="dropdown-item" poke-type="bicho">Bicho</option>
-      <option value="dropdown-item" poke-type="dragón">Dragón</option>
-      <option value="dropdown-item" poke-type="eléctrico">Eléctrico</option>
-      <option value="dropdown-item" poke-type="fantasma">Fantasma</option>
-      <option value="dropdown-item" poke-type="fuego">Fuego</option>
-      <option value="dropdown-item" poke-type="hada">Hada</option>
-      <option value="dropdown-item" poke-type="hielo">Hielo</option>
-      <option value="dropdown-item" poke-type="lucha">Lucha</option>
-      <option value="dropdown-item" poke-type="normal">Normal</option>
-      <option value="dropdown-item" poke-type="planta">Planta</option>
-      <option value="dropdown-item" poke-type="psíquico">Psíquico</option>
-      <option value="dropdown-item" poke-type="roca">Roca</option>
-      <option value="dropdown-item" poke-type="tierra">Tierra</option>
-      <option value="dropdown-item" poke-type="veneno">Veneno</option>
-      <option value="dropdown-item" poke-type="volador">Volador</option>
+  <article id="pokesee">
+    <div>
+
+      <select nombre="type" id="seleccion">
+        <option value="Filter">Filtrar por tipo</option>
+        <option value="Steel">Acero</option>
+        <option value="Water">Agua</option>
+        <option value="Bug">Bicho</option>
+        <option value="Dragon">Dragón</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Fire">Fuego</option>
+        <option value="Fairy">Hada</option>
+        <option value="Ice">Hielo</option>
+        <option value="Fighting">Lucha</option>
+        <option value="Normal">Normal</option>
+        <option value="Grass">Planta</option>
+        <option value="Psychic">Psíquico</option>
+        <option value="Rock">Roca</option>
+        <option value="Ground">Tierra</option>
+        <option value="Poison">Veneno</option>
+        <option value="Flying">Volador</option>
     </div>
     </select>
-  </div>
-  <div id="result" class="hidden">
+    </div>
+
+    <div id="result" class="hidden">
       <p>"este es el div result"</p>
     </div>
-    
-  <div class="container-fluid">
-    <div id="root" class="row"></div>
-  </div>
-  
 
+    <div class="container-fluid">
+      <div id="root" class="row"></div>
+    </div>
+
+  </article>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
