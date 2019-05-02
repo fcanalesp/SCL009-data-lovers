@@ -1,18 +1,12 @@
 /* Manejo de data */
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window 
 //declaramos variable 
 
-//llamando de la forma cipher pero para filtrar
-//window.dexPoke = {
-  const pokedexType = (codePoke, condicion) => {
+
+  const pokedexType = (codePoke, condition) => {
     const pokeByFilter = codePoke.filter(element => {
   
-      return element.type.includes(condicion);
-      //let filterType = codePoke.filter(element => {
-      //el filter pasa por todos los elementos del array
-      //element va a tomar ese valor en cada vuelta
-      //return element.type.includes(condition);
+      return element.type.includes(condition);
+      
     });
   
     return pokeByFilter;
