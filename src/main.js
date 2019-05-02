@@ -4,7 +4,8 @@ let codePoke = POKEMON.pokemon;
 //aqui estamos mostrando todos los pokemon  
 const root = document.getElementById("root");
 
-let filtType = document.getElementById("seleccion");
+let filtType = document.getElementById("type");
+
 //console.log(codePoke);
 //mostrar toda la data a traves de una variable, tomando un id del body
 let rootBody = document.getElementById("root");
@@ -31,14 +32,13 @@ window.onload = pokepoke(codePoke);
 
 let selectType = "";
 window.selectType = selectType;
-let filType = document.getElementById("type-select");
 let guardar = document.getElementById("root");
-filType.addEventListener("change", () => {
-		//window.dexPoke.filterType(codePoke, element.getAttribute("poke-type"));
+filtType.addEventListener("change", () => {
+		//window.pokeByFilter.filterType(codePoke, element.getAttribute(""));
 	//});
 
-let condition = filType.options
-[filType.selectedIndex].text;
+let condition = filtType.options
+[filtType.selectedIndex].text;
 console.log(condition);
 });
 
@@ -76,7 +76,7 @@ filtType.addEventListener("change",()=>{
         
     const pokeByFilter = window.pokedexType(codePoke, condicion);
     for ( let i=0; i<pokeByFilter.length;i++){
-        result += `<div class="col-sm-2">
+        rootBody.innerHTML += `<div class="col-sm-2">
         <img src="${codePoke[i].img}" class="card-img-top" alt="Poke">
         <div class="card-body">
             <div class="col-sm-2">
@@ -89,16 +89,9 @@ filtType.addEventListener("change",()=>{
       </div>`
         for ( let pikachu=0; pikachu<pokeByFilter[i].type.length;pikachu++){
         
-            result += `<div id="result">
-          ${pokeByFilter[i].type[pikachu]} </div>`
+            rootBody.innerHTML += `<div id="result">${pokeByFilter[i].type[pikachu]}</div>`
           
         }
-     
-
-
-    
-
-    rootBody.innerHTML = result;
 
 }
 
