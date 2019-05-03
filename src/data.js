@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-//esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-//FILTRANDO!
-const filterPoke = (codePoke, condition) => {
-  let filterTypeResult = codePoke.filter(element => {
-    
-    return element.type.includes(condition);
-  })
-  return filterTypeResult;
-};
-
-window.filterPoke = filterPoke;
-
-
-
-=======
 /* Manejo de data */
 //declaramos variable 
 
@@ -98,4 +80,3 @@ window.filterPoke = filterPoke;
     return ("No existen pokemones asociados a esa debilidad");
   };
   }*/
->>>>>>> d72b02b7e3fbe9b9abe811bebd4c1bed3a955c58
