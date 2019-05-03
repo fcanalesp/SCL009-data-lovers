@@ -1,7 +1,7 @@
 /* Manejo de data */
 //declaramos variable 
 
-
+//Funcion filtrar
   const pokedexType = (codePoke, condition) => {
     const pokeByFilter = codePoke.filter(element => {
   
@@ -15,20 +15,24 @@
   window.pokedexType = pokedexType;
   
   //Funcion ordenar
-  const arrPoke= (codePoke, condition) => {
-    arrPoke.sort(function (a,b ) {
+  //const sortCode= (sortData, sortBy, sortOrder)
+    //pokedexType= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
+  
+  const sortCode= codePoke.sort((a,b )=> {
       if (a.name > b.name) {
         return 1;
-      }
-      if (a.name < b.name) {
-        return -1;
-      }
-      
-      return 0;
-    });
-
-  }
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+   return 0;     
+  console.log
+});
   
+
+ window.sortCode= sortCode; 
+
+ 
  /* function getPokemonByName(name) {
     var pokemonList = POKEMON.pokemon; //pokrmonlist es la variable que guardara el pokemon que se busque
     for (var i = 0; i < pokemonList.length; i++) {

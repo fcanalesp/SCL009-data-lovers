@@ -17,7 +17,7 @@ let pokepoke = (codePoke) => {
       <img src="${codePoke[i].img}" class="card-img-top" alt="Poke">
       <div class="card-body">
           <div class="col-sm-2">
-        <h5 class="card-title">"Nombre:${codePoke[i].name}"</h5>
+        <h5 class="card-title">"${codePoke[i].name}"</h5>
         <h6 class="card-title">"Número:${codePoke[i].num}"</h6>
         <p class="card-text">"Tipo:${codePoke[i].type}"</p>
         <a href="#" class="btn-primary">Evolucion</a>
@@ -30,23 +30,23 @@ let pokepoke = (codePoke) => {
 }
 window.onload = pokepoke(codePoke);
 
- //window.selectType = selectType;
+//window.selectType = selectType;
 let guardar = document.getElementById("type");
 guardar.addEventListener("change", () => {
-		
+
   let condition = guardar.options[guardar.selectedIndex].value;
-//console.log(condition);
-  let filter =window.pokedexType(codePoke,condition);
-  rootBody.innerHTML ="";
+  //console.log(condition);
+  let filter = window.pokedexType(codePoke, condition);
+  rootBody.innerHTML = "";
 
-  filter.forEach(element =>{
-  rootBody.innerHTML +=
+  filter.forEach(element => {
+    rootBody.innerHTML +=
 
-    `<div class="col-sm-2">
+      `<div class="col-sm-2">
     <img src="${element.img}" class="card-img-top" alt="Poke">
     <div class="card-body">
         <div class="col-sm-2">
-      <h5 class="card-title">"Nombre:${element.name}"</h5>
+      <h5 class="card-title">${element.name}"</h5>
       <h6 class="card-title">"Número:${element.num}"</h6>
       <p class="card-text">"Tipo:${element.type}"</p>
       <a href="#" class="btn-primary">Evolucion</a>
@@ -55,4 +55,12 @@ guardar.addEventListener("change", () => {
   </div>`
   })
 
-    });
+});
+
+//llamar funcion ordenar
+
+/*let order= document.getElementById("descendente");
+order.addEventListener('change', function (){
+
+  let ordenados= window.pokedexType(codePoke,"name",)
+})*/
