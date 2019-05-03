@@ -9,7 +9,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
-</div>
+
 
 <body>
 
@@ -25,9 +25,14 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
-
+    <p>Ordena Por Nombre:
+       
+    <input type="button" id="Descendente" name="ordenar_descendente" value="A/Z">
+    <input type="button" id="Ascendente"  name="ordenar_ascendente" value="Z/A">
+  </p>
   </header>
   <div>
+<<<<<<< HEAD
     <select name="select" id="type">
 
       <option value="">Filtrar por tipo</option>
@@ -61,6 +66,33 @@
   </div>
 
 
+=======
+<p>Filtrar por Tipo</p>
+    <select name="select" id="type">
+      <option value="Filter">Seleccionar</option>
+      <option value="Water">Agua</option>
+      <option value="Bug">Bicho</option>
+      <option value="Dragon">Dragón</option>
+      <option value="Electric">Eléctrico</option>
+      <option value="Ghost">Fantasma</option>
+      <option value="Fire">Fuego</option>
+      <option value="Ice">Hielo</option>
+      <option value="Fighting">Lucha</option>
+      <option value="Normal">Normal</option>
+      <option value="Grass">Planta</option>
+      <option value="Psychic">Psíquico</option>
+      <option value="Rock">Roca</option>
+      <option value="Ground">Tierra</option>
+      <option value="Poison">Veneno</option>
+      <option value="Flying">Volador</option>
+
+    </select>
+  </div>
+
+  <div class="container-fluid">
+    <div id="root" class="row"></div>
+  </div>
+>>>>>>> d72b02b7e3fbe9b9abe811bebd4c1bed3a955c58
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
