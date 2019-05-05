@@ -61,13 +61,11 @@ guardar.addEventListener("change", () => {
 
 
 let order = document.getElementById("ascendente").addEventListener("click", () => {
-
- // let condition = order.options[order.selectedIndex].value;
+ 
   //console.log(condition);
-  let sortData = window.sortCode(codePoke, condition);
   rootBody.innerHTML = "";
 
-  sortData.forEach(element => {
+  order.forEach(element => {
     rootBody.innerHTML +=
 
       `<div class="col-sm-2">
@@ -84,29 +82,6 @@ let order = document.getElementById("ascendente").addEventListener("click", () =
   })
 
 });
-document.getElementById("descendente").addEventListener("click", () => {
 
-  let condition = order.options[order.selectedIndex].value;
-  //console.log(condition);
-  let sortDa = window.sortCode(codePoke, condition);
-  rootBody.innerHTML = "";
 
-  sortDa.forEach(element => {
-    rootBody.innerHTML +=
 
-      `<div class="col-sm-2">
-    <img src="${element.img}" class="card-img-top" alt="Poke">
-    <div class="card-body">
-        <div class="col-sm-2">
-      <h5 class="card-title">${element.name}"</h5>
-      <h6 class="card-title">"Número:${element.num}"</h6>
-      <p class="card-text">"Tipo:${element.type}"</p>
-      <a href="#" class="btn-primary">Evolucion</a>
-      </div>
-    </div>
-  </div>`
-  })
-
-});
-
-//const ordenarPoke= document.getElementById("ascendente").addEventListener("click", (event) => {
