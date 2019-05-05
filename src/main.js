@@ -2,11 +2,7 @@
 //declaramos una variable para llamar la data 
 const codePoke = window.POKEMON.pokemon;
 //aqui estamos mostrando todos los pokemon  
-//const root = document.getElementById("root");
 
-//const type = document.getElementById("type");
-
-//console.log(codePoke);
 //mostrar toda la data a traves de una variable, tomando un id del body
 let rootBody = document.getElementById("root");
 //aqui llamamos a los pokemon solo por sus nombres en el orden que esta establecido en la data
@@ -82,10 +78,10 @@ saveForWeakness.addEventListener("change", () => {
 
 });
 
+// ordenando alfabeticamente
 
-//llamar funcion ordena
-/*let order= document.getElementById("descendente");
+let order= document.getElementById("descending");
 order.addEventListener('change', function (){
 
   let ordenados= window.pokedexType(codePoke,"name",)
-})*/
+})

@@ -1,7 +1,5 @@
 /* Manejo de data */
-//declaramos variable 
 
-//Funcion filtrar
 const pokedexType = (codePoke, condition) => {
   const pokeByFilter = codePoke.filter(element => {
 
@@ -24,25 +22,37 @@ const pokedexWeaknesses = (codePoke, conditionTwo) => {
   return pokeByWeakness;
 }
   window.pokedexWeaknesses = pokedexWeaknesses;
+  
   //Funcion ordenar
-  //const sortCode= (sortData, sortBy, sortOrder)
-  //pokedexType= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
-
-  /*const sortCode = codePoke.sort((a, b) => {
-    if (a.name > b.name) {
-      return 1;
+  
+  const sortCode=(codePoke, sortCodeBy, sortCodeOrder) => { 
+    let resultOrdenate = "";
+    
+      if (sortCodeOrder === "AZ") {
+        resultOrdenate = codePoke.sort(sortCodeBy)
+      }
+    
+      if (sortCodeOrder === "ZA") {
+        resultOrdenate = codePoke.sort(sortCodeBy).reverse();
+         
+      }
+      return resultOrdenate;
     }
-    if (a.name < b.name) {
-      return -1;
-    }
-    return 0;
-    console.log
-  });
-
-
-
-window.sortCode = sortCode;*/
-
+    window.sortCode = sortCode;
+    
+    //sort Poke = sortBy
+    //sortCode= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
+    /*function sortCodeBy(a, b) {
+      if (a.name > b.name) {
+        return 1;
+      }
+    
+      if (a.name < b.name) {
+        return -1;
+      }
+    
+      return 0;
+    }*/
 
 /*function getPokemonByName(name) {
    var pokemonList = POKEMON.pokemon; //pokrmonlist es la variable que guardara el pokemon que se busque
