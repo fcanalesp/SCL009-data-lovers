@@ -24,7 +24,7 @@ let pokepoke = (codePoke) => {
 }
 window.onload = pokepoke(codePoke);
 
-
+// FILTRADO POR TIPO
 let saveForType = document.getElementById("type");
 saveForType.addEventListener("change", () => {
 
@@ -80,8 +80,28 @@ saveForWeakness.addEventListener("change", () => {
 
 // ordenando alfabeticamente
 
-let order= document.getElementById("descending");
+let order= document.getElementById("Descending");
 order.addEventListener('change', function (){
 
-  let ordenados= window.pokedexType(codePoke,"name",)
-})
+  let ordered= window.sortCode(codePoke,"name",);
+  rootBody.innerHTML +=
+
+  ordered.forEach(element => {
+    rootBody.innerHTML +=
+
+      `<div class="col-sm-2">
+    <img src="${element.img}" class="card-img-top" alt="Poke">
+    <div class="card-body">
+        <div class="col-sm-2">
+      <h5 class="card-title">${element.name}"</h5>
+      <h6 class="card-title">"Número:${element.num}"</h6>
+      <p class="card-text">"Tipo:${element.type}"</p>
+      <a href="#" class="btn-primary">Evolucion</a>
+      </div>
+    </div>
+  </div>`
+  })
+
+});
+
+// BOTON SERCH

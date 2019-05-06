@@ -1,5 +1,6 @@
 /* Manejo de data */
 
+// FILTRADO POR TIPO
 const pokedexType = (codePoke, condition) => {
   const pokeByFilter = codePoke.filter(element => {
 
@@ -23,7 +24,7 @@ const pokedexWeaknesses = (codePoke, conditionTwo) => {
 }
   window.pokedexWeaknesses = pokedexWeaknesses;
   
-  //Funcion ordenar
+  //FUNCION ORDENAR
   
   const sortCode=(codePoke, sortCodeBy, sortCodeOrder) => { 
     let resultOrdenate = "";
@@ -39,32 +40,20 @@ const pokedexWeaknesses = (codePoke, conditionTwo) => {
       return resultOrdenate;
     }
     window.sortCode = sortCode;
-    
-    //sort Poke = sortBy
-    //sortCode= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
-    /*function sortCodeBy(a, b) {
-      if (a.name > b.name) {
-        return 1;
-      }
-    
-      if (a.name < b.name) {
-        return -1;
-      }
-    
-      return 0;
-    }*/
 
-/*function getPokemonByName(name) {
-   var pokemonList = POKEMON.pokemon; //pokrmonlist es la variable que guardara el pokemon que se busque
-   for (var i = 0; i < pokemonList.length; i++) {
-     if (pokemonList[i].name.toLowerCase() == name.toLowerCase())
-       return (pokemonList[i]);
+// BOTÓN SERCH
+
+function getPokemonByName(name) {
+   var codePoke = POKEMON.pokemon; 
+   for (var i = 0; i < codepoke.length; i++) {
+     if (codepoke[i].name.toLowerCase() == name.toLowerCase())
+       return (codepoke[i]);
    }
    return ("No existe ese Pokemon");
  }
  
  
- function getPokemonById(id) {
+ /*function getPokemonById(id) {
  
    var pokemonList = POKEMON.pokemon;
    for (var i = 0; i < pokemonList.length; i++) {
