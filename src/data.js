@@ -103,12 +103,12 @@ const pokedexWeaknesses = (codePoke, conditionTwo) => {
   });
   return pokeByWeakness;
 }
-  window.pokedexWeaknesses = pokedexWeaknesses;
-  //Funcion ordenar
-  //const sortCode= (sortData, sortBy, sortOrder)
-  //pokedexType= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
+window.pokedexWeaknesses = pokedexWeaknesses;
+//Funcion ordenar
+//const sortCode= (sortData, sortBy, sortOrder)
+//pokedexType= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
 
-  /*const sortCode = codePoke.sort((a, b) => {
+/*const sortCode = codePoke.sort((a, b) => {
     if (a.name > b.name) {
       return 1;
     }

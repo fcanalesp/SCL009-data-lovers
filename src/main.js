@@ -25,8 +25,8 @@ let pokepoke = (codePoke) => {
         <a href="#" class="btn-primary">Evolucion</a>
         </div>
       </div>`
-        
-    }
+
+  }
 }
 window.onload = pokepoke(codePoke);
 
@@ -60,7 +60,7 @@ saveForType.addEventListener("change", () => {
 
 
 // FILTRANDO POR DEBILIDADES
-let saveForWeakness= document.getElementById("weaknesses");
+let saveForWeakness = document.getElementById("weaknesses");
 saveForWeakness.addEventListener("change", () => {
 
   let conditionTwo = saveForWeakness.options[saveForWeakness.selectedIndex].value;
@@ -88,8 +88,7 @@ saveForWeakness.addEventListener("change", () => {
 
 
 //llamar funcion ordena
-/*let order= document.getElementById("descendente");
-order.addEventListener('change', function (){
+
 
 let ordenAs = document.getElementById("ascdesc");
 ordenAs.addEventListener("change", () => {
@@ -113,4 +112,4 @@ ordenAs.addEventListener("change", () => {
    </div>`
   })
 
-});
+})
