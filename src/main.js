@@ -3,7 +3,9 @@
 const codePoke = window.POKEMON.pokemon;
 //aqui estamos mostrando todos los pokemon  
 //const root = document.getElementById("root");
-
+document.getElementById("recharge").addEventListener("click", () => {
+  location.reload();
+})
 //const type = document.getElementById("type");
 
 //console.log(codePoke);
@@ -56,16 +58,16 @@ guardar.addEventListener("change", () => {
   })
 
 });
-// esta la cagada no entiendo!!!!!!
 //llamar funcion ordenar
 
 
-let order = document.getElementById("ascendente").addEventListener("click", () => {
- 
-  //console.log(condition);
+let ordenAs = document.getElementById("ascdesc");
+ordenAs.addEventListener("change", () => {
+  let pokeSort = ordenAs.value;
+  let ordenPoke = sortCode(codePoke, pokeSort);
   rootBody.innerHTML = "";
 
-  order.forEach(element => {
+  ordenPoke.forEach(element => {
     rootBody.innerHTML +=
 
       `<div class="col-sm-2">
@@ -82,6 +84,3 @@ let order = document.getElementById("ascendente").addEventListener("click", () =
   })
 
 });
-
-
-
