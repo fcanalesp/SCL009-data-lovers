@@ -20,6 +20,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Home</a>
 <!-- botón serch -->
+      <a class="navbar-brand" href="#" id="recharge" type="">Home</a>
+      
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -30,9 +32,15 @@
     <input type="button" id="Descending" name="Descending_Order" value="A/Z">
     <input type="button" id="Ascending"  name="Ascending_Order" value="Z/A">
   </p>
+      <select name="orden" id="ascdesc">
+        <option value="az">AZ</option>
+        <option value="za">ZA</option>
+      </select>
+    </select>
+    </p>
   </header>
   <div>
-<p>Filtrar por Tipo</p>
+    <p>Filtrar por Tipo</p>
     <select name="select" id="type">
       <option value="Filter">Seleccionar</option>
       <option value="Water">Agua</option>

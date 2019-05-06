@@ -60,3 +60,20 @@ it('debería ser una función', () => {
 })
 
 
+
+describe('sortCode', () => {
+
+
+  it('debería ser una función', () => {
+    assert.equal(typeof sortCode, 'function');
+  });
+
+
+  it('debería retornar el elemento Caterpie ordenando de la A a la Z', () => {
+    assert.deepEqual(window.sortCode(dataPoke, "AZ"), [{
+      name: "Caterpie",
+      num: "010",
+      type: ["Bug"]
+    }, ])
+  });
+})

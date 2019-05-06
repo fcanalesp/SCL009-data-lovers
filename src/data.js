@@ -1,4 +1,5 @@
 /* Manejo de data */
+//Aqui Filtraremos, ordenaremos y calcularemos
 
 // FILTRADO POR TIPO
 const pokedexType = (codePoke, condition) => {
@@ -13,6 +14,86 @@ const pokedexType = (codePoke, condition) => {
 }
 window.pokedexType = pokedexType;
 
+
+const sortCode = (codePoke, sortCodeOrder) => {
+  if (sortCodeOrder == "az") {
+    codePoke.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+
+      if (a.name < b.name) {
+        return -1;
+      }
+
+      return 0;
+
+
+    })
+  }
+  if (sortCodeOrder == "za") {
+    codePoke.sort((a, b) => {
+      if (a.name > b.name) {
+        return -1;
+      }
+
+      if (a.name < b.name) {
+        return 0;
+      }
+
+      return 1;
+    })
+  }
+  return codePoke;
+}
+
+window.sortCode = sortCode;
+//Funcion ordenar
+/*const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
+  return codePoke.sort((a, b) => {
+    if (sortCodeOrder == "az") {
+      if (a[sortCodeBy] > b[sortCodeBy]) {
+        return 1;
+      }
+
+      if (a[sortCodeBy] < b[sortCodeBy]) {
+        return -1;
+      }
+
+      return 0;
+
+    }
+
+    if (sortCodeOrder == "za") {
+      if (a[sortCodeBy] > b[sortCodeBy]) {
+        return -1;
+      }
+
+      if (a[sortCodeBy] < b[sortCodeBy]) {
+        return 1;
+      }
+
+      return 0;
+    };
+
+
+  })
+}*/
+//funcion ordenar : sort code => codepoke es la data; sortcodeby: es lo que quiero ordenar; sortcodeorder: es como lo voy a ordenar
+/*const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
+  if (sortCodeOrder == "az") {
+    codePoke.sort((a, b) => {
+      if (a[sortCodeBy].localeCompare(b[sortCodeBy])) return 1;
+    })
+  }
+    if (sortCodeOrder == "za") {
+      codePoke.sort((a, b) => {
+        if (a[sortCodeBy].localeCompare(b[sortCodeBy])) return -1;
+      })
+    
+  }
+  return codePoke;
+}*/
 // FILTRADO POR DEBILIDAD
 const pokedexWeaknesses = (codePoke, conditionTwo) => {
   const pokeByWeakness = codePoke.filter(element => {
@@ -22,7 +103,7 @@ const pokedexWeaknesses = (codePoke, conditionTwo) => {
   });
   return pokeByWeakness;
 }
-  window.pokedexWeaknesses = pokedexWeaknesses;
+ window.pokedexWeaknesses = pokedexWeaknesses;
   
   //FUNCION ORDENAR
   
@@ -38,6 +119,18 @@ const pokedexWeaknesses = (codePoke, conditionTwo) => {
          
       }
       return resultOrdenate;
+window.pokedexWeaknesses = pokedexWeaknesses;
+    }
+//Funcion ordenar
+//const sortCode= (sortData, sortBy, sortOrder)
+//pokedexType= data; sort by= que quiero ordenar; sortOrder = como lo voy a ordenar
+
+/*const sortCode = codePoke.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
     }
     window.sortCode = sortCode;
 
