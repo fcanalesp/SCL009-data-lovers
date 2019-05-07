@@ -26,7 +26,7 @@ let pokepoke = (codePoke) => {
 }
 window.onload = pokepoke(codePoke);
 
-
+// FILTRADO POR TIPO
 let saveForType = document.getElementById("type");
 saveForType.addEventListener("change", () => {
 
@@ -80,13 +80,15 @@ saveForWeakness.addEventListener("change", () => {
 
 });
 
+/*SORT CORTITO
 
-//llamar funcion ordenar (sort)
 let ordenAs = document.getElementById("ascdesc");
 
 ordenAs.addEventListener("change", () => {
   let pokeSort = ordenAs.value;
+
   let ordenPoke = window.sortCode(codePoke, "name", pokeSort);
+
   rootBody.innerHTML = "";
 
   ordenPoke.forEach(element => {
@@ -104,4 +106,4 @@ ordenAs.addEventListener("change", () => {
    </div>`
   })
 
-})
+})*/

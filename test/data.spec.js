@@ -34,6 +34,7 @@ const dataPoke = [{
       "Electric",
       "Grass"
   ]
+
   }
 
 ]
@@ -56,19 +57,25 @@ describe('pokedexType', () => {
         "Flying",
         "Rock"
       ]
-
     }])
   });
 })
 
+describe('pokedexWeaknesses', () => {
 
-describe('sortCode', () => {
+
+it('debería ser una función', () => {
+  assert.equal(typeof pokedexWeaknesses, 'function');
+});
 
 
-  it('debería ser una función', () => {
-    assert.equal(typeof sortCode, 'function');
-  });
-
+  it('debería retornar elemento "Dragonite" para filtrar por debilidad Ice"', ()  => {
+    assert.deepEqual(window.pokedexWeaknesses(dataPoke,"Ice"), [{
+      name: "Dragonite",
+      num: "149",
+      type: ["Dragon"],
+      weaknesses: ["Ice"]
+    }])
 
   it('debería retornar el elemento Caterpie", "Dragonite" y "Squirtle" para ordenar de la "A a la Z"', () => {
     assert.deepEqual(window.sortCode(dataPoke, "az"), [{

@@ -1,6 +1,8 @@
 /* Manejo de data */
 //Aqui Filtraremos, ordenaremos y calcularemos
-//Funcion filtrar
+
+
+// FILTRADO POR TIPO
 const pokedexType = (codePoke, condition) => {
   const pokeByFilter = codePoke.filter(element => {
 
@@ -12,7 +14,6 @@ const pokedexType = (codePoke, condition) => {
 
 }
 window.pokedexType = pokedexType;
-
 
 // FILTRADO POR DEBILIDAD
 const pokedexWeaknesses = (codePoke, conditionTwo) => {
@@ -56,8 +57,22 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
       return 0;
     })
 
+
   }
   return resultCode;
 
 }
+
+/*OTRO SORT PERO CORTITO
+// parametro 1: es la data, patrametro 2: lo que quiere ordenar, parametro 3: como lo quiero ordenar 
+const ordenar = (codePoke, codeBy, sortCodeOrder) => {
+  const comparar = codePoke.sort((a,b)=>{
+    return a[codeBy].localeCompare(b[codeBy])
+  })
+  if (sortCodeOrder==="za"){
+    return comparar.reverse();
+  }
+}
+window.ordenar = ordenar;
+*/
 window.sortCode = sortCode;
