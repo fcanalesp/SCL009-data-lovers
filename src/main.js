@@ -1,14 +1,10 @@
 /* Manejo del DOM */
 //declaramos una variable para llamar la data 
 const codePoke = window.POKEMON.pokemon;
-//aqui estamos mostrando todos los pokemon  
-//const root = document.getElementById("root");
+// Recargamos página
 document.getElementById("recharge").addEventListener("click", () => {
   location.reload();
 })
-//const type = document.getElementById("type");
-
-//console.log(codePoke);
 //mostrar toda la data a traves de una variable, tomando un id del body
 let rootBody = document.getElementById("root");
 //aqui llamamos a los pokemon solo por sus nombres en el orden que esta establecido en la data
@@ -56,8 +52,6 @@ saveForType.addEventListener("change", () => {
   })
 
 });
-//llamar funcion ordenar
-
 
 // FILTRANDO POR DEBILIDADES
 let saveForWeakness = document.getElementById("weaknesses");
@@ -87,18 +81,17 @@ saveForWeakness.addEventListener("change", () => {
 });
 
 
-//llamar funcion ordena
-
-
+//llamar funcion ordenar (sort)
 let ordenAs = document.getElementById("ascdesc");
+
 ordenAs.addEventListener("change", () => {
   let pokeSort = ordenAs.value;
-  let ordenPoke = sortCode(codePoke, pokeSort);
+  //console.log(pokeSort)
+  let ordenPoke = window.sortCode(codePoke, "name", pokeSort);
   rootBody.innerHTML = "";
 
   ordenPoke.forEach(element => {
     rootBody.innerHTML +=
-
       `<div class="col-sm-2">
      <img src="${element.img}" class="card-img-top" alt="Poke">
      <div class="card-body">
