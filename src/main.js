@@ -86,7 +86,6 @@ let ordenAs = document.getElementById("ascdesc");
 
 ordenAs.addEventListener("change", () => {
   let pokeSort = ordenAs.value;
-  //console.log(pokeSort)
   let ordenPoke = window.sortCode(codePoke, "name", pokeSort);
   rootBody.innerHTML = "";
 

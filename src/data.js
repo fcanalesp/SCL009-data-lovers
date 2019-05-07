@@ -56,11 +56,8 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
       return 0;
     })
 
-
   }
   return resultCode;
 
 }
-
-
 window.sortCode = sortCode;
