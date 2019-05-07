@@ -7,7 +7,8 @@ const dataPoke = [{
 
     name: "Caterpie",
     num: "010",
-    type: ["Bug"]
+    type: ["Bug"],
+    weaknesses: ["Fire"]
   },
   {
     name: "Dragonite",
@@ -18,7 +19,8 @@ const dataPoke = [{
   {
     name: "Squirtle",
     num: "007",
-    type: ["Water"]
+    type: ["Water"],
+    weaknesses: ["Electric"]
   }
 
 ]
@@ -35,7 +37,8 @@ describe('pokedexType', () => {
     assert.deepEqual(window.pokedexType(dataPoke, "Bug"), [{
       name: "Caterpie",
       num: "010",
-      type: ["Bug"]
+      type: ["Bug"],
+      weaknesses: ["Fire"]
     }])
   });
 })
@@ -56,24 +59,5 @@ it('debería ser una función', () => {
       weaknesses: ["Ice"]
 
     }])
-  });
-})
-
-
-
-describe('sortCode', () => {
-
-
-  it('debería ser una función', () => {
-    assert.equal(typeof sortCode, 'function');
-  });
-
-
-  it('debería retornar el elemento Caterpie ordenando de la A a la Z', () => {
-    assert.deepEqual(window.sortCode(dataPoke, "AZ"), [{
-      name: "Caterpie",
-      num: "010",
-      type: ["Bug"]
-    }, ])
   });
 })

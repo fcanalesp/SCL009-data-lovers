@@ -86,15 +86,12 @@ saveForWeakness.addEventListener("change", () => {
 
 });
 
-// ordenando alfabeticamente
-
-//llamar funcion ordena
-
+/*SORT CORTITO
 
 let ordenAs = document.getElementById("ascdesc");
 ordenAs.addEventListener("change", () => {
   let pokeSort = ordenAs.value;
-  let ordenPoke = sortCode(codePoke, pokeSort);
+  let ordenPoke = window.ordenar(codePoke, "name", pokeSort);
   rootBody.innerHTML = "";
 
   ordenPoke.forEach(element => {
@@ -113,4 +110,4 @@ ordenAs.addEventListener("change", () => {
    </div>`
   })
 
-})
+})*/
