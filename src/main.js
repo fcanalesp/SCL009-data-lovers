@@ -80,7 +80,7 @@ saveForWeakness.addEventListener("change", () => {
 
 });
 
-/*SORT CORTITO
+//SORT CORTITO
 
 let ordenAs = document.getElementById("ascdesc");
 
@@ -106,4 +106,4 @@ ordenAs.addEventListener("change", () => {
    </div>`
   })
 
-})*/
+})
