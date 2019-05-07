@@ -1,7 +1,6 @@
 /* Manejo de data */
 //Aqui Filtraremos, ordenaremos y calcularemos
 
-
 // FILTRADO POR TIPO
 const pokedexType = (codePoke, condition) => {
   const pokeByFilter = codePoke.filter(element => {
@@ -35,7 +34,7 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
         return 1;
       }
 
-      if (a[sortCodeBy] < b[sortCodeBy]) {
+     else if (a[sortCodeBy] < b[sortCodeBy]) {
         return -1;
       }
 
@@ -53,7 +52,6 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
       if (a[sortCodeBy] < b[sortCodeBy]) {
         return 1;
       }
-
       return 0;
     })
 
@@ -65,7 +63,7 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
 
 /*OTRO SORT PERO CORTITO
 // parametro 1: es la data, patrametro 2: lo que quiere ordenar, parametro 3: como lo quiero ordenar 
-const ordenar = (codePoke, codeBy, sortCodeOrder) => {
+const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
   const comparar = codePoke.sort((a,b)=>{
     return a[codeBy].localeCompare(b[codeBy])
   })
@@ -76,3 +74,4 @@ const ordenar = (codePoke, codeBy, sortCodeOrder) => {
 window.ordenar = ordenar;
 */
 window.sortCode = sortCode;
+
