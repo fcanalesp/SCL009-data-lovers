@@ -127,8 +127,7 @@ describe('pokedexWeaknesses', () => {
 
 
     it('debería retornar el elemento "Squirtle","Dragonite" y " Caterpie",  para ordenar de la "Z a la A"', () => {
-      assert.deepEqual(window.sortCode(dataPoke, "name", "za"), [
-        {
+      assert.deepEqual(window.sortCode(dataPoke, "name", "za"), [{
           name: "Squirtle",
           num: "007",
           type: ["Water"],
@@ -136,7 +135,7 @@ describe('pokedexWeaknesses', () => {
             "Electric",
             "Grass"
           ]
-        },{
+        }, {
           name: "Dragonite",
           num: "149",
           type: ["Dragon"],
@@ -147,7 +146,7 @@ describe('pokedexWeaknesses', () => {
             "Fairy"
 
           ]
-        },{
+        }, {
           name: "Caterpie",
           num: "010",
           type: ["Bug"],
@@ -157,42 +156,41 @@ describe('pokedexWeaknesses', () => {
             "Rock"
           ]
         }
-        
+
       ])
     });
 
 
     it('debería retornar el elemento "Squirtle"," Caterpie" y "Dragonite",  para ordenar del "1 al 151"', () => {
       assert.deepEqual(window.sortCode(dataPoke, "num", "asc"), [{
-          name: "Squirtle",
-          num: "007",
-          type: ["Water"],
-          weaknesses: [
-            "Electric",
-            "Grass"
-          ]
-        }, {
-          name: "Caterpie",
-          num: "010",
-          type: ["Bug"],
-          weaknesses: [
-            "Fire",
-            "Flying",
-            "Rock"
-          ]
-        }, {
-          name: "Dragonite",
-          num: "149",
-          type: ["Dragon"],
-          weaknesses: [
-            "Ice",
-            "Rock",
-            "Dragon",
-            "Fairy"
+        name: "Squirtle",
+        num: "007",
+        type: ["Water"],
+        weaknesses: [
+          "Electric",
+          "Grass"
+        ]
+      }, {
+        name: "Caterpie",
+        num: "010",
+        type: ["Bug"],
+        weaknesses: [
+          "Fire",
+          "Flying",
+          "Rock"
+        ]
+      }, {
+        name: "Dragonite",
+        num: "149",
+        type: ["Dragon"],
+        weaknesses: [
+          "Ice",
+          "Rock",
+          "Dragon",
+          "Fairy"
 
-          ]
-        }
-      ])
+        ]
+      }])
     });
   })
 })
@@ -227,3 +225,22 @@ it('debería retornar el elemento "Dragonite"," Caterpie" y "Squirtle" para orde
     ]
   }])
 })
+describe('counterForType', () => {
+
+
+      it('debería ser una función', () => {
+        assert.equal(typeof counterForType, 'function');
+      });
+      it('debería retornar "existe 1 Pokemon tipo "Water", para filtrar por tipo Water"', () => {
+          assert.deepEqual(window.counterForType(dataPoke,"Water","type"), [{
+                name: "Squirtle",
+                num: "007",
+                type: ["Water"],
+                weaknesses: [
+                  "Electric",
+                  "Grass"
+                ]
+
+              }])
+            })
+          })

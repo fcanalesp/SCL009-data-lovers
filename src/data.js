@@ -1,5 +1,17 @@
 /* Manejo de data */
 //Aqui Filtraremos, ordenaremos y calcularemos
+// CALCULO DE POKEMONES POR TIPO
+const counterForType = (codePoke, condition, counterBy) => {
+  let resultCounter = codePoke.reduce((contador, codePoke) => {
+    if (codePoke[counterBy].includes(condition)) {
+      return contador + 1;
+    } else {
+      return contador;
+    }
+  }, 0)
+  return resultCounter;
+};
+window.counterForType = counterForType;
 
 // FILTRADO POR TIPO
 const pokedexType = (codePoke, condition) => {
@@ -44,42 +56,3 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
   }
 }
 window.sortCode = sortCode;
-/*const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
-  let resultCode = codePoke;
-  if (sortCodeOrder == "az") {
-    resultCode.sort((a, b) => {
-      if (a[sortCodeBy] > b[sortCodeBy]) {
-        return 1;
-      }
-
-     else if (a[sortCodeBy] < b[sortCodeBy]) {
-        return -1;
-      }
-
-      return 0;
-    })
-
-  }
-
-  if (sortCodeOrder == "za") {
-    resultCode.sort((a, b) => {
-      if (a[sortCodeBy] > b[sortCodeBy]) {
-        return -1;
-      }
-
-      if (a[sortCodeBy] < b[sortCodeBy]) {
-        return 1;
-      }
-      return 0;
-    })
-
-
-  }
-  return resultCode;
-
-}
-calculate: (codePoke) => {
-  return codePoke.length;
-}
-*/
-// parametro 1: es la data, patrametro 2: lo que quiere ordenar, parametro 3: como lo quiero ordenar 
