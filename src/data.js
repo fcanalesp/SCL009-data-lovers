@@ -1,6 +1,19 @@
 /* Manejo de data */
 //Aqui Filtraremos, ordenaremos y calcularemos
 
+// CALCULO DE POKEMONES POR TIPO
+const counterForType = (codePoke, condition, counterBy) => {
+  let resultCounter = codePoke.reduce((contador, codePoke) => {
+    if (codePoke[counterBy].includes(condition)) {
+      return contador + 1;
+    } else {
+      return contador;
+    }
+  }, 0)
+  return resultCounter;
+};
+window.counterForType = counterForType;
+
 // FILTRADO POR TIPO
 const pokedexType = (codePoke, condition) => {
   const pokeByFilter = codePoke.filter(element => {
@@ -27,51 +40,30 @@ window.pokedexWeaknesses = pokedexWeaknesses;
 
 //funcion ordenar : sort code => codepoke es la data; sortcodeby: es lo que quiero ordenar; sortcodeorder: es como lo voy a ordenar
 const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
-  let resultCode = codePoke;
-  if (sortCodeOrder == "az") {
-    resultCode.sort((a, b) => {
-      if (a[sortCodeBy] > b[sortCodeBy]) {
-        return 1;
-      }
-
-     else if (a[sortCodeBy] < b[sortCodeBy]) {
-        return -1;
-      }
-
-      return 0;
-    })
-
-  }
-
-  if (sortCodeOrder == "za") {
-    resultCode.sort((a, b) => {
-      if (a[sortCodeBy] > b[sortCodeBy]) {
-        return -1;
-      }
-
-      if (a[sortCodeBy] < b[sortCodeBy]) {
-        return 1;
-      }
-      return 0;
-    })
-
-
-  }
-  return resultCode;
-
-}
-
-/*OTRO SORT PERO CORTITO
-// parametro 1: es la data, patrametro 2: lo que quiere ordenar, parametro 3: como lo quiero ordenar 
-const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
   const comparar = codePoke.sort((a,b)=>{
-    return a[codeBy].localeCompare(b[codeBy])
+    return a[sortCodeBy].localeCompare(b[sortCodeBy])
   })
-  if (sortCodeOrder==="za"){
+if (sortCodeOrder === "az"){
+  return comparar;
+}
+  if (sortCodeOrder=== "za"){
     return comparar.reverse();
   }
 }
-window.ordenar = ordenar;
-*/
+
 window.sortCode = sortCode;
 
+// HACIENDO LOS CALCULOS
+/*Para realizar el calculo ocuparemos las mismas variables de los filtros. por lo tanto durante el hack edition podriamos probar como hacer que todo llegue a una sola variables para despues solo llamarlas y no declararlas tantas veces */
+
+/*const pokecounter = (data, condition, counterBy) => {
+  let result = data.reduce((contador, data) => {
+    if (data[counterBy].includes(condition)) {
+      return contador + 1;
+    } else {
+      return contador;
+    }
+  }, 0)
+  return result;
+};
+window.counter = counter;*/
