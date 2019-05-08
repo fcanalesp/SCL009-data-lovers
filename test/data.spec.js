@@ -81,9 +81,16 @@ describe('pokedexWeaknesses', () => {
         "Fairy"
       ]
     }])
+  })
 
+  describe('sortCode', () => {
+
+
+    it('debería ser una función', () => {
+      assert.equal(typeof sortCode, 'function');
+    });
     it('debería retornar el elemento Caterpie", "Dragonite" y "Squirtle" para ordenar de la "A a la Z"', () => {
-      assert.deepEqual(window.sortCode(dataPoke, "name","az"), [{
+      assert.deepEqual(window.sortCode(dataPoke, "name", "az"), [{
 
           name: "Caterpie",
           num: "010",
@@ -117,11 +124,11 @@ describe('pokedexWeaknesses', () => {
         }
       ])
     });
-  })
 
-  it('debería retornar el elemento "Squirtle","Dragonite" y " Caterpie",  para ordenar de la "Z a la A"', () => {
-      assert.deepEqual(window.sortCode(dataPoke,"name", "za"), [{
 
+    it('debería retornar el elemento "Squirtle","Dragonite" y " Caterpie",  para ordenar de la "Z a la A"', () => {
+      assert.deepEqual(window.sortCode(dataPoke, "name", "za"), [
+        {
           name: "Squirtle",
           num: "007",
           type: ["Water"],
@@ -129,8 +136,7 @@ describe('pokedexWeaknesses', () => {
             "Electric",
             "Grass"
           ]
-        },
-        {
+        },{
           name: "Dragonite",
           num: "149",
           type: ["Dragon"],
@@ -141,17 +147,83 @@ describe('pokedexWeaknesses', () => {
             "Fairy"
 
           ]
-        },
-        {
-        name: "Caterpie",
-        num: "010",
-        type: ["Bug"],
-        weaknesses: [
-          "Fire",
-          "Flying",
-          "Rock"
-        ]
-      },
-     ])
-  });
+        },{
+          name: "Caterpie",
+          num: "010",
+          type: ["Bug"],
+          weaknesses: [
+            "Fire",
+            "Flying",
+            "Rock"
+          ]
+        }
+        
+      ])
+    });
+
+
+    it('debería retornar el elemento "Squirtle"," Caterpie" y "Dragonite",  para ordenar del "1 al 151"', () => {
+      assert.deepEqual(window.sortCode(dataPoke, "num", "asc"), [{
+          name: "Squirtle",
+          num: "007",
+          type: ["Water"],
+          weaknesses: [
+            "Electric",
+            "Grass"
+          ]
+        }, {
+          name: "Caterpie",
+          num: "010",
+          type: ["Bug"],
+          weaknesses: [
+            "Fire",
+            "Flying",
+            "Rock"
+          ]
+        }, {
+          name: "Dragonite",
+          num: "149",
+          type: ["Dragon"],
+          weaknesses: [
+            "Ice",
+            "Rock",
+            "Dragon",
+            "Fairy"
+
+          ]
+        }
+      ])
+    });
+  })
+})
+it('debería retornar el elemento "Dragonite"," Caterpie" y "Squirtle" para ordenar del "151 al 1"', () => {
+  assert.deepEqual(window.sortCode(dataPoke, "num", "des"), [{
+    name: "Dragonite",
+    num: "149",
+    type: ["Dragon"],
+    weaknesses: [
+      "Ice",
+      "Rock",
+      "Dragon",
+      "Fairy"
+
+    ]
+  }, {
+    name: "Caterpie",
+    num: "010",
+    type: ["Bug"],
+    weaknesses: [
+      "Fire",
+      "Flying",
+      "Rock"
+    ]
+  }, {
+    name: "Squirtle",
+    num: "007",
+    type: ["Water"],
+    weaknesses: [
+      "Electric",
+      "Grass"
+    ]
+  }])
 })

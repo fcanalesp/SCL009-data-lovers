@@ -27,6 +27,24 @@ window.pokedexWeaknesses = pokedexWeaknesses;
 
 //funcion ordenar : sort code => codepoke es la data; sortcodeby: es lo que quiero ordenar; sortcodeorder: es como lo voy a ordenar
 const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
+  const comparar = codePoke.sort((a, b) => {
+    return a[sortCodeBy].localeCompare(b[sortCodeBy])
+  })
+  if (sortCodeOrder === "az") {
+    return comparar;
+  }
+  if (sortCodeOrder === "za") {
+    return comparar.reverse();
+  }
+  if (sortCodeOrder === "asc") {
+    return comparar;
+  }
+  if (sortCodeOrder === "des") {
+    return comparar.reverse();
+  }
+}
+window.sortCode = sortCode;
+/*const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
   let resultCode = codePoke;
   if (sortCodeOrder == "az") {
     resultCode.sort((a, b) => {
@@ -60,18 +78,8 @@ const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
   return resultCode;
 
 }
-
-/*OTRO SORT PERO CORTITO
-// parametro 1: es la data, patrametro 2: lo que quiere ordenar, parametro 3: como lo quiero ordenar 
-const sortCode = (codePoke, sortCodeBy, sortCodeOrder) => {
-  const comparar = codePoke.sort((a,b)=>{
-    return a[codeBy].localeCompare(b[codeBy])
-  })
-  if (sortCodeOrder==="za"){
-    return comparar.reverse();
-  }
+calculate: (codePoke) => {
+  return codePoke.length;
 }
-window.ordenar = ordenar;
 */
-window.sortCode = sortCode;
-
+// parametro 1: es la data, patrametro 2: lo que quiere ordenar, parametro 3: como lo quiero ordenar 
