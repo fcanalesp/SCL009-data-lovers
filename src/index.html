@@ -13,31 +13,34 @@
 
 <body>
 
-  <header>
+  <header class="cabeza">
 
 
-    <h1>Code-Poke</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#" id="recharge" type="">Home</a>
-      <h5>Ordena Por Nombre:
+    <h1>
+      <a class="navbar-brand" href="#" id="recharge" type="">
+        <img src="./img/codePoke.png" class="imagen">
+      </a>
+    </h1>
+    <nav class="" navbar navbar-dark bg-dark"">
+      <td>Ordena Por Nombre:
         <select name="orden" id="ascdesc">
           <option value="0">Selecciona tu opción ordenar</option>
           <option value="az">AZ</option>
           <option value="za">ZA</option>
         </select>
-      </h5>
-      <h5>Ordena Por Número:
+      </td>
+      <td>Ordena Por Número:
         <select name="orden" id="num">
           <option value="0">Selecciona tu opción ordenar</option>
           <option value="asc">1-151</option>
           <option value="des">151-1</option>
         </select>
-      </h5>
+      </td>
 
     </nav>
 
   </header>
-  <div>
+  <div class="selecc">
     <p>Filtrar por Tipo</p>
     <select name="select" id="type">
       <option value="Filter">Seleccionar</option>
@@ -59,8 +62,9 @@
 
     </select>
   </div>
+
   <!-- filtro por debilidad -->
-  <div><br>
+  <div class="selecc">
     <p>Filtrar por Debilidad</p>
     <select name="select" id="weaknesses">
       <option value="Filter">Seleccionar</option>
@@ -84,30 +88,11 @@
   </div>
   <br>
   <div>
-    <div> 
-      <p id = "cantPokes"></p>
+    <div>
+      <p id="cantPokes"></p>
     </div>
-      <p>Calcular por Tipo</p>
-      <select name="select" id="calulo-type">
-        <option value="Filter">Seleccionar</option>
-        <option value="Water">Agua</option>
-        <option value="Bug">Bicho</option>
-        <option value="Dragon">Dragón</option>
-        <option value="Electric">Eléctrico</option>
-        <option value="Ghost">Fantasma</option>
-        <option value="Fire">Fuego</option>
-        <option value="Ice">Hielo</option>
-        <option value="Fighting">Lucha</option>
-        <option value="Normal">Normal</option>
-        <option value="Grass">Planta</option>
-        <option value="Psychic">Psíquico</option>
-        <option value="Rock">Roca</option>
-        <option value="Ground">Tierra</option>
-        <option value="Poison">Veneno</option>
-        <option value="Flying">Volador</option>
-  
-      </select>
-    </div>
+
+  </div>
   <div class="container-fluid">
     <div id="root" class="row"></div>
   </div>
