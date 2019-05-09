@@ -23,6 +23,7 @@ let pokepoke = (codePoke) => {
 
   }
 }
+
 window.onload = pokepoke(codePoke);
 
 // FILTRADO POR TIPO
