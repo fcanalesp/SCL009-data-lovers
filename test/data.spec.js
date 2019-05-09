@@ -231,16 +231,7 @@ describe('counterForType', () => {
       it('debería ser una función', () => {
         assert.equal(typeof counterForType, 'function');
       });
-      it('debería retornar "existe 1 Pokemon tipo "Water", para filtrar por tipo Water"', () => {
-          assert.deepEqual(window.counterForType(dataPoke,"Water","type"), [{
-                name: "Squirtle",
-                num: "007",
-                type: ["Water"],
-                weaknesses: [
-                  "Electric",
-                  "Grass"
-                ]
-
-              }])
-            })
-          })
+      it('debería retornar "1 Pokemon tipo "Water", para Water"', () => {
+          assert.deepEqual(window.counterForType(dataPoke,"Water","type"),1)
+      });
+    });
