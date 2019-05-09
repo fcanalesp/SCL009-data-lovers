@@ -14,10 +14,11 @@ let pokepoke = (codePoke) => {
       `<div class="col-sm-2">
       <img src="${codePoke[i].img}" class="card-img-top" alt="Poke">
       <div class="card-body">
-        <div class="col-sm-2 carta-poke">
-          <h5 class="card-title">${codePoke[i].name}</h5>
-          <h6 class="card-title">Número: ${codePoke[i].num}</h6>
-          <p class="card-text">Tipo: ${codePoke[i].type}</p>
+          <div class="col-sm-2">
+        <h5 class="card-title">"${codePoke[i].name}"</h5>
+        <h6 class="card-title">"Número:${codePoke[i].num}"</h6>
+        <p class="card-text">"Tipo:${codePoke[i].type}"</p>
+        <a href="#" class="btn-primary">Evolucion</a>
         </div>
       </div>`
 
@@ -47,9 +48,10 @@ saveForType.addEventListener("change", () => {
       <img src="${element.img}" class="card-img-top" alt="Poke">
       <div class="card-body">
           <div class="col-sm-2">
-        <h5 class="card-title">${element.name}</h5>
-        <h6 class="card-title">Número: ${element.num}</h6>
-        <p class="card-text">Tipo: ${element.type}</p>
+        <h5 class="card-title">"${element.name}"</h5>
+        <h6 class="card-title">"Número:${element.num}"</h6>
+        <p class="card-text">"Tipo:${element.type}"</p>
+        <a href="#" class="btn-primary">Evolucion</a>
         </div>
       </div>`
   })
@@ -68,15 +70,17 @@ saveForWeakness.addEventListener("change", () => {
   filter.forEach(element => {
     rootBody.innerHTML +=
 
-    `<div class="col-sm-2">
+      `<div class="col-sm-2">
     <img src="${element.img}" class="card-img-top" alt="Poke">
     <div class="card-body">
         <div class="col-sm-2">
-      <h5 class="card-title">${element.name}</h5>
-      <h6 class="card-title">Número: ${element.num}</h6>
-      <p class="card-text">Tipo: ${element.type}</p>
+      <h5 class="card-title">${element.name}"</h5>
+      <h6 class="card-title">"Número:${element.num}"</h6>
+      <p class="card-text">"Tipo:${element.type}"</p>
+      <a href="#" class="btn-primary">Evolucion</a>
       </div>
-    </div>`
+    </div>
+  </div>`
   })
 
 });
@@ -88,21 +92,50 @@ let ordenAs = document.getElementById("ascdesc");
 ordenAs.addEventListener("change", () => {
   let pokeSort = ordenAs.value;
 
-  let ordenPoke = window.sortCode(codePoke, "name", pokeSort);
-
+  let ordenPoke = "";
+  ordenPoke = window.sortCode(codePoke, "name", pokeSort);
   rootBody.innerHTML = "";
 
   ordenPoke.forEach(element => {
     rootBody.innerHTML +=
-    `<div class="col-sm-2">
-    <img src="${element.img}" class="card-img-top" alt="Poke">
-    <div class="card-body">
-        <div class="col-sm-2">
-      <h5 class="card-title">${element.name}</h5>
-      <h6 class="card-title">Número: ${element.num}</h6>
-      <p class="card-text">Tipo: ${element.type}</p>
-      </div>
-    </div>`
+      `<div class="col-sm-2">
+     <img src="${element.img}" class="card-img-top" alt="Poke">
+     <div class="card-body">
+         <div class="col-sm-2">
+       <h5 class="card-title">${element.name}"</h5>
+       <h6 class="card-title">"Número:${element.num}"</h6>
+       <p class="card-text">"Tipo:${element.type}"</p>
+       <a href="#" class="btn-primary">Evolucion</a>
+       </div>
+     </div>
+   </div>`
   })
 
 })
+
+let ordenDes = document.getElementById("num");
+
+ordenDes.addEventListener("change", () => {
+  let pokeSortCode = ordenDes.value;
+
+  let orden = "";
+  orden = window.sortCode(codePoke, "num", pokeSortCode);
+  rootBody.innerHTML = "";
+
+  orden.forEach(element => {
+    rootBody.innerHTML +=
+      `<div class="col-sm-2">
+     <img src="${element.img}" class="card-img-top" alt="Poke">
+     <div class="card-body">
+         <div class="col-sm-2">
+       <h5 class="card-title">${element.name}"</h5>
+       <h6 class="card-title">"Número:${element.num}"</h6>
+       <p class="card-text">"Tipo:${element.type}"</p>
+       <a href="#" class="btn-primary">Evolucion</a>
+       </div>
+     </div>
+   </div>`
+  })
+
+})
+
