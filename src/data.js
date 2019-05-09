@@ -1,6 +1,3 @@
-/* Manejo de data */
-//Aqui Filtraremos, ordenaremos y calcularemos
-// CALCULO DE POKEMONES POR TIPO
 const counterForType = (codePoke, condition, counterBy) => {
   let resultCounter = codePoke.reduce((contador, codePoke) => {
     if (codePoke[counterBy].includes(condition)) {
@@ -10,7 +7,7 @@ const counterForType = (codePoke, condition, counterBy) => {
     }
   }, 0)
   return resultCounter;
-};
+}
 window.counterForType = counterForType;
 
 // FILTRADO POR TIPO

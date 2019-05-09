@@ -228,10 +228,10 @@ it('debería retornar el elemento "Dragonite"," Caterpie" y "Squirtle" para orde
 describe('counterForType', () => {
 
 
-      it('debería ser una función', () => {
-        assert.equal(typeof counterForType, 'function');
-      });
-      it('debería retornar "1 Pokemon tipo "Water", para Water"', () => {
-          assert.deepEqual(window.counterForType(dataPoke,"Water","type"),1)
-      });
-    });
+  it('debería ser una función', () => {
+    assert.equal(typeof counterForType, 'function');
+  });
+  it('debería retornar "1 Pokemon tipo "Water", para Water"', () => {
+    assert.deepEqual(window.counterForType(dataPoke, "Water", "type"), 1)
+  });
+});
