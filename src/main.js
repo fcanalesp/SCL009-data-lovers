@@ -11,7 +11,7 @@ let rootBody = document.getElementById("root");
 let pokepoke = (codePoke) => {
   for (let i = 0; i < codePoke.length; i++) {
     rootBody.innerHTML +=
-    `<div class="card col-sm-2">
+      `<div class="col-sm-2">
       <img src="${codePoke[i].img}" class="card-img-top" alt="Poke">
       <div class="card-body">
         <div class="col-sm-2 carta-poke">
