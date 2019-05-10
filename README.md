@@ -14,7 +14,7 @@
 
 * [Prototipo de alta Fidelidad](#checklist)
 * [Conclusiones](#CodePoke)
-
+* [Aquí puedes visualizar nuestro trello](https://trello.com/b/Zv0LsmpF/data-love)
 *
 ## *1. CodePoke*
  Es un proyecto encargado por Laboratoria que consiste en
@@ -125,3 +125,12 @@ Pokémon Go.
 *Como* jugador principiante,
 *Quiero* ordenar los pokemones en orden alfabetico
 *Para* llegar mas facil a aquello que estan al final de la lista.
+
+*Resultado*
+
+En el link siguiente puedes acceder a una demostración de la aplicación y experimentar con sus resultados y proceso de funcionamiento [link](https://jensarela.github.io/SCL009-data-lovers/src/index.html)
+
+
+### * Prototipos de Alta fidelidad  *
+
+Desarrollado en Figma, y exportado a Zeplin [aquí puedes visualizar](https://scene.zeplin.io/project/5cd4bb0920f8ff5736ed32a5)
