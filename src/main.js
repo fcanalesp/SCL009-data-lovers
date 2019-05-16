@@ -33,13 +33,13 @@ saveForType.addEventListener("change", () => {
   let condition = saveForType.options[saveForType.selectedIndex].value; // guarda seleccion usiario
   //console.log(condition);
 
-  //COUNTER
+  //COUNTER type
   let typeCounter = window.counterForType(codePoke, condition, "type");
 
   let filter = window.pokedexType(codePoke, condition);
   rootBody.innerHTML = "";
   document.getElementById("cantPokes").innerHTML =
-    ` <div class= "cantPokes col-12">Existen ${typeCounter} pokemon tipo ${condition}</div> `
+    ` <div class= "cantPokes col-12">Existen ${typeCounter} pokemon débiles a ${condition}</div> `
 
   filter.forEach(element => {
     rootBody.innerHTML +=
@@ -63,8 +63,13 @@ saveForWeakness.addEventListener("change", () => {
 
   let conditionTwo = saveForWeakness.options[saveForWeakness.selectedIndex].value;
   //console.log(condition);
+
+  //COUNTER DEBILIDAD
+let weaknessCounter = window.counterForWeakness(codePoke,conditionTwo,"weaknesses");
+
   let filter = window.pokedexWeaknesses(codePoke, conditionTwo);
   rootBody.innerHTML = "";
+  document.getElementById("cantPokes").innerHTML = ` <div class= "cantPokes col-12">Existen ${weaknessCounter} pokemon tipo ${conditionTwo}</div> `
 
   filter.forEach(element => {
     rootBody.innerHTML +=

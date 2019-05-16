@@ -1,6 +1,7 @@
+//Counter Tipo
 const counterForType = (codePoke, condition, counterBy) => {
   let resultCounter = codePoke.reduce((contador, codePoke) => {
-    if (codePoke[counterBy].includes(condition)) {
+      if (codePoke[counterBy].includes(condition)) {
       return contador + 1;
     } else {
       return contador;
@@ -23,6 +24,18 @@ const pokedexType = (codePoke, condition) => {
 }
 window.pokedexType = pokedexType;
 
+//Counter Debilidad
+const counterForWeakness = (codePoke, conditionTwo, counterBy) => {
+  let resultCounter = codePoke.reduce((contador, codePoke) =>  {
+    if (codePoke[counterBy].includes(conditionTwo)) {
+      return contador +1;
+    } else {
+      return contador;
+    }
+    },0)
+    return resultCounter;
+  }
+  window.counterForWeakness = counterForWeakness;
 // FILTRADO POR DEBILIDAD
 const pokedexWeaknesses = (codePoke, conditionTwo) => {
   const pokeByWeakness = codePoke.filter(element => {
